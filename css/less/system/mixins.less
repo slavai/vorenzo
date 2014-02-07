@@ -1,0 +1,80 @@
+.clearfix() {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.ac {
+  text-align: center;
+}
+
+.al {
+  text-align: left;
+}
+
+.ar {
+  text-align: right
+}
+
+.border-radius(@br) {
+  -webkit-border-radius: @arguments;
+  -moz-border-radius: @arguments;
+  -ms-border-radius: @arguments;
+  -o-border-radius: @arguments;
+  border-radius: @arguments;
+}
+
+.box-shadow(@bs) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -ms-box-shadow: @arguments;
+  -o-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+
+.box-shadow(@bs1, @bs2) {
+  -webkit-box-shadow: @bs1, @bs2;
+  -moz-box-shadow: @bs1, @bs2;
+  -ms-box-shadow: @bs1, @bs2;
+  -o-box-shadow: @bs1, @bs2;
+  box-shadow: @bs1, @bs2;
+}
+
+.box-shadow(@bs1, @bs2, @bs3) {
+  -webkit-box-shadow: @bs1, @bs2, @bs3;
+  -moz-box-shadow: @bs1, @bs2, @bs3;
+  -ms-box-shadow: @bs1, @bs2, @bs3;
+  -o-box-shadow: @bs1, @bs2, @bs3;
+  box-shadow: @bs1, @bs2, @bs3;
+}
+
+.transition(@tr) {
+  -webkit-transition: @tr;
+  -moz-transition: @tr;
+  -ms-transition: @tr;
+  -o-transition: @tr;
+  transition: @tr;
+}
+
+.text-shadow(@ts) {
+  text-shadow: 1px 1px 1px @ts;
+}
+
+.text-shadow(@ts0, @ts1) {
+  text-shadow: @ts0 @ts1;
+}

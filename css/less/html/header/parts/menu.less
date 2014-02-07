@@ -1,0 +1,92 @@
+.header-navigation {
+  .fl;
+  width: 739px;
+  position: relative;
+  a {
+    text-decoration: none;
+    color: @header-menu-link-color-default;
+    font-size: @header-menu-link-size;
+    &:hover {
+      color: @header-menu-link-color-hover;
+    }
+  }
+  ul {
+    &.nav-menu {
+      font-size: 0;
+      margin-top: 17px;
+      .ac;
+      > li {
+        list-style: none;
+        display: inline-block;
+        line-height: 40px;
+        vertical-align: middle;
+
+        > a {
+          border-top: @header-menu-current-item-border-top-size transparent solid;
+          margin: 0 1px;
+          display: block;
+          padding: 0px 17px 6px 16px;
+
+        }
+        &.current-menu-item, &:hover {
+          > a {
+            background: url(/images/header-menu-item-side-gradient.png) no-repeat 0 0, url(/images/header-menu-item-side-gradient.png) no-repeat 100% 0;
+            border-top: @header-menu-current-item-border-top-size @header-menu-current-item-border-top-color solid;
+            color: @header-menu-link-color-current;
+
+          }
+          &.menu-item-has-children:hover {
+            background-image: none;
+            > a {
+              margin: 0;
+              border-right: 1px #d2d2d2 solid;
+              border-left: 1px #d2d2d2 solid;
+              background-image: none;
+              background: #fff;
+              z-index: 70;
+              position: relative;
+            }
+            > ul {
+              &.sub-menu {
+                opacity: 1;
+                position: absolute;
+                top: 64px;
+                visibility: visible;
+                .transition(all .1s ease-in-out);
+              }
+            }
+
+          }
+
+        }
+        > ul {
+          &.sub-menu {
+            .al;
+            opacity: 0;
+            visibility: hidden;
+            top: 55px;
+            position: absolute;
+            background-color: @bgc-white;
+            z-index: 50;
+            border: 1px #d2d2d2 solid;
+            .transition(all .1s ease-in-out);
+            .box-shadow(1px 2px 3px fade(@c-black, 20%));
+            > li {
+              padding: 0 18px;
+              > a {
+                border-bottom: 1px #d2d2d2 solid;
+                display: block;
+              }
+              &:last-child {
+                a {
+                  border-bottom: none;
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
