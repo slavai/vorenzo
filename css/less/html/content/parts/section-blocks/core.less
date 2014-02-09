@@ -1,5 +1,65 @@
 
 .conteiner{
-  width: 970px;
   margin: 0 auto;
+  &.content-width{
+    max-width: 970px;
+  }
+  &.full-width{
+    width: 100%;
+    > .row-fluid{
+      max-width: 970px;
+      margin: 0 auto;
+    }
+  }
+}
+.border-button_wrapper{
+  position: absolute;
+  top: 100%;
+  margin-top: -10px;
+  z-index: 9999;
+  text-align: center;
+  width: 100%;
+  left: 0;
+}
+.border-button{
+  border: 5px solid @c-white;
+  background-color:@content-border-button-backgroun-color ;
+  background-image: url(/images/button-background.png);
+  background-repeat: repeat-x;
+  background-size: 100% auto;
+  background-position: top left;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  color: #ffffff;
+  padding: 11px;
+  text-shadow: 1px 1px 0 #12bee0;
+  font-size: 1.6rem;
+  font-weight: 200;
+}
+.circle_icon_box{
+  margin-left: 7px;
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+  font-size: 16px;
+  color: @content-border-button-backgroun-color;
+  display: inline-block;
+  background-color: #ffffff;
+  vertical-align: initial;
+}
+.shadow_icon_box{
+  box-shadow: 4px 3px 3px -2px rgba(0,0,0,0.5) inset;
+}
+.section_bottom_shadow{
+  &:after{
+    content: "";
+    position: absolute;
+    bottom: -31px;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    z-index: 1;
+    background:url(/images/section_bottom_shadow.png) no-repeat top center ;
+  }
 }

@@ -14,4 +14,18 @@ jQuery(document).ready(function () {
             jQuery('.header-search .search-wrapper').removeClass('open');
         }
     });
+
+//    menu togle
+    jQuery('.menu-item-has-children').each(function(){
+        jQuery(this).children('a').append('<i class="fa fa-chevron-right fa-rotate-90 hidden-desktop"></i>')
+    });
+    jQuery('.nav_button_togle').click(function(e){
+        jQuery('.header-navigation').toggle();
+        e.preventDefault();
+
+    });
+
+    jQuery('.menu-item-has-children').click(function(e){
+        jQuery(this).toggleClass("open").children("ul").toggle()
+    });
 });
