@@ -20,33 +20,62 @@
   text-align: center;
   width: 100%;
   left: 0;
+  .border-button{
+    margin-top: 0px;
+    display: inline;
+    padding: 11px;
+  }
 }
 .border-button{
-  border: 5px solid @c-white;
-  background-color:@content-border-button-backgroun-color ;
   background-image: url(/images/button-background.png);
   background-repeat: repeat-x;
   background-size: 100% auto;
   background-position: top left;
   border-radius: 8px;
   -webkit-border-radius: 8px;
-  color: #ffffff;
-  padding: 11px;
-  text-shadow: 1px 1px 0 #12bee0;
+  padding:6px 11px;
+  margin-top: 20px;
+
   font-size: 1.6rem;
   font-weight: 200;
+  display: inline;
+  display: inline-block;
+  &.btn-dark{
+    border: 5px solid @c-white;
+    background-color:@content-border-button-dark-backgroun-color ;
+    text-shadow: 1px 1px 0 #12bee0;
+    color: #ffffff;
+    .circle_icon_box{
+      color:@content-border-button-dark-backgroun-color ;
+      background: #fff;
+
+    }
+  }
+  &.btn-white{
+    border: 5px solid #f1f1f1;
+    background-color:@content-border-button-white-backgroun-color ;
+    color: #000;
+    .circle_icon_box{
+      color:@c-white ;
+      background: @c-light-blue;
+    }
+  }
 }
 .circle_icon_box{
   margin-left: 7px;
   width: 26px;
-  height: 26px;
+  height: 25px;
   border-radius: 13px;
   -webkit-border-radius: 13px;
   font-size: 16px;
-  color: @content-border-button-backgroun-color;
   display: inline-block;
   background-color: #ffffff;
   vertical-align: initial;
+  text-align: center;
+  padding-top: 1px;
+  i{
+
+  }
 }
 .shadow_icon_box{
   box-shadow: 4px 3px 3px -2px rgba(0,0,0,0.5) inset;
@@ -61,5 +90,80 @@
     height: 25px;
     z-index: 1;
     background:url(/images/section_bottom_shadow.png) no-repeat top center ;
+  }
+}
+
+//LIST STYLE
+#main {
+  li {
+    padding-left: 19px;
+    margin-bottom: 16px;
+  }
+  ul.arrow_list{
+    padding-bottom: 20px;
+    li{
+      position: relative;
+      &:before{
+        content: "\f054";
+        display: inline-block;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+        color: @arrow_list_color;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: absolute;
+        left: 0;
+        top: 5px;
+      }
+    }
+  }
+}
+
+//SECTION SEPARATOR
+  .section_border-separator{
+    border-top:5px solid #e86565;
+  }
+
+//SECTION GRADIENT HEADER
+  .section_gradient_header{
+    background: url(/images/section_geadient_header.png) repeat-x top left;
+  }
+//icon-list
+
+.section_header {
+  line-height: 89px;
+  font-size: 27px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  margin-bottom: 29px;
+}
+.icon-list .fa-2 {
+  font-size: 2rem;
+}
+.icon-list .fa-3 {
+  font-size: 4rem;
+}
+.icon-list .fa-4 {
+  font-size: 7rem;
+}
+.icon-list .fa-5 {
+  font-size: 10rem;
+}
+.icon-list .fa-6 {
+  font-size: 14rem;
+}
+.icon-list{
+  margin-bottom: 20px;
+  .icon-list_head{
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+  .fa{
+    color: @content-icon-list-color;
+  }
+  .span2{
+    text-align: center;
   }
 }
