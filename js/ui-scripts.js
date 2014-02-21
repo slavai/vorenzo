@@ -28,4 +28,6 @@ jQuery(document).ready(function () {
     jQuery('.menu-item-has-children').click(function(e){
         jQuery(this).toggleClass("open").children("ul").toggle()
     });
+
+    jQuery("#toTop").scrollToTop(1000);
 });

@@ -73,10 +73,8 @@
   vertical-align: initial;
   text-align: center;
   padding-top: 1px;
-  i{
-
-  }
 }
+
 .shadow_icon_box{
   box-shadow: 4px 3px 3px -2px rgba(0,0,0,0.5) inset;
 }
@@ -94,15 +92,16 @@
 }
 
 //LIST STYLE
-#main {
+#main, footer {
   li {
-    padding-left: 19px;
-    margin-bottom: 16px;
+
   }
   ul.arrow_list{
     padding-bottom: 20px;
     li{
       position: relative;
+      padding-left: 19px;
+      margin-bottom: 16px;
       &:before{
         content: "\f054";
         display: inline-block;
@@ -123,7 +122,8 @@
 
 //SECTION SEPARATOR
   .section_border-separator{
-    border-top:5px solid #e86565;
+    border-top:5px solid #efefef;
+    &.SBScolor1{border-top-color: #e86565}
   }
 
 //SECTION GRADIENT HEADER
@@ -138,6 +138,9 @@
   font-weight: lighter;
   text-transform: uppercase;
   margin-bottom: 29px;
+  &.section_header_with_border{
+    border-bottom: 1px solid #efefef;
+  }
 }
 .icon-list .fa-2 {
   font-size: 2rem;
@@ -165,5 +168,32 @@
   }
   .span2{
     text-align: center;
+  }
+}
+.widget_wrapper{
+  padding: 5px 0;
+}
+.tag{
+  padding: 5px;
+  border: solid 1px #3d3d3d;
+  margin-right: 2px;
+  margin-bottom: 8px;
+  float: left;
+  cursor: pointer;
+}
+
+#toTop{
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  position: fixed;
+  right: 150px;
+  bottom: 50px;
+  background: #5b5f62;
+  display: none;
+  i{
+    color: @c-light-blue;
+    font-size: 35px;
+    line-height: 46px;
   }
 }
